@@ -23,7 +23,7 @@ return [
 		// use generated sprite, requires pnpm run build
 		// to generate (dev sprite doesn't work since it's not in the public folder)
 		'folder' => '',
-		'sprite' => fn () => Url::path(vite()->useHotFile('.never')->asset('assets/sprite.svg'))
+		'sprite' => fn() => Url::path(vite()->useHotFile('.never')->asset('assets/sprite.svg'))
 	],
 	/** Email */
 	'email' => require __DIR__ . '/email.php',
@@ -43,24 +43,25 @@ return [
 		]
 	],
 	/** Build Env / Vite / etc. */
-	'bnomei.dotenv.dir' => fn () => realpath(kirby()->roots()->base()),
+	'bnomei.dotenv.dir' => fn() => realpath(kirby()->roots()->base()),
 	'lukaskleinschmidt.kirby-laravel-vite.buildDirectory' => 'dist',
 	'distantnative.retour.config' => 'data/storage/retour.yml',
 	/** Panel */
-	'johannschopplich.plausible.sharedLink' => env('PLAUSIBLE_SHARED_LINK'),
 	'panel' => [
-		'menu' => fn () => [
+		'menu' => fn() => [
 			'site' => Menu::site(),
 			'-',
 			'images' => Menu::page(null, 'images', page('page://images')),
 			'-',
-			'forms' => Menu::page(null, 'survey', page('page://forms')),
+			// 'forms' => Menu::page(null, 'survey', page('page://forms')),
 			'users',
-			'plausible',
+			'system',
+			// 'plausible',
 			'retour',
+
 		]
 	],
-	'ready' => fn () => [
+	'ready' => fn() => [
 		'panel' => [
 			'favicon' => option('debug') ? 'static/panel/favicon-dev.svg' : 'static/panel/favicon-live.svg',
 			'css' => vite('src/styles/panel.css'),
