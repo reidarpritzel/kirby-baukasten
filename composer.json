@@ -1,19 +1,17 @@
 {
 	"@schema": "https://getcomposer.org/schema.json",
 	"name": "tobimori/kirby-baukasten",
-	"description": "An opinionated, supercharged version of the Kirby CMS Plainkit",
+	"description": "An opinionated, supercharged version of the Kirby CMS Plainkit. Fork of tobimori kirby-baukasten",
 	"type": "project",
 	"keywords": [
 		"kirby",
 		"cms",
 		"starterkit"
 	],
-	"homepage": "https://moeritz.io",
+	"homepage": "https://reidarpritzel.com",
 	"authors": [
 		{
-			"name": "Tobias Möritz",
-			"email": "tobias@moeritz.io",
-			"homepage": "https://moeritz.io"
+			"name": "Reidar Pritzel"
 		}
 	],
 	"minimum-stability": "beta",
